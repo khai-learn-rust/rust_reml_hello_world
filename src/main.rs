@@ -4,7 +4,6 @@ extern crate gtk;
 extern crate relm;
 
 use gtk::prelude::*;
-use relm::Widget;
 
 pub struct Model {
     count: i32,
@@ -18,7 +17,7 @@ pub enum Msg {
 }
 
 #[relm_attributes::widget]
-impl Widget for Win {
+impl relm::Widget for Win {
     fn model() -> Model {
         Model {
             count: 0,
@@ -68,5 +67,5 @@ impl Widget for Win {
 }
 
 fn main() {
-    Win::run(()).unwrap();
+    relm::run::<Win>(()).unwrap();
 }
