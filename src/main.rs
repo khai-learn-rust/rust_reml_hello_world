@@ -61,9 +61,13 @@ impl relm::Widget for Win {
             },
 
             delete_event(_, _) => (Msg::Quit, gtk::Inhibit(false)),
-            title: "Simple Counter",
+            title: &create_window_title(self.model.count)
         }
     }
+}
+
+fn create_window_title (count: i32) -> std::string::String {
+    format!("Counter: {}", count)
 }
 
 fn main() {
