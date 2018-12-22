@@ -49,13 +49,13 @@ impl relm::Widget for Win {
                     #[name="dec_button"]
                     gtk::Button {
                         clicked => Msg::Decrease,
-                        label: "-",
+                        label: "Decrease",
                     },
 
                     #[name="inc_button"]
                     gtk::Button {
                         clicked => Msg::Increase,
-                        label: "+",
+                        label: "Increase",
                     },
                 }
             },
