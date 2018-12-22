@@ -19,9 +19,7 @@ pub enum Msg {
 #[relm_attributes::widget]
 impl relm::Widget for Win {
     fn model() -> Model {
-        Model {
-            count: 0,
-        }
+        Model { count: 0 }
     }
 
     fn update(&mut self, msg: Msg) {
@@ -66,7 +64,7 @@ impl relm::Widget for Win {
     }
 }
 
-fn create_window_title (count: i32) -> std::string::String {
+fn create_window_title(count: i32) -> std::string::String {
     format!("Counter: {}", count)
 }
 
