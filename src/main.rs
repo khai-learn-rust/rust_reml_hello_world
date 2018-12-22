@@ -61,7 +61,7 @@ impl relm::Widget for Win {
             },
 
             delete_event(_, _) => (Msg::Quit, gtk::Inhibit(false)),
-            title: &create_window_title(self.model.count)
+            title: &create_window_title(self.model.count),
         }
     }
 }
